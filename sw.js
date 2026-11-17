@@ -1,6 +1,6 @@
 /* Guardaroba Tracker – supporto offline. Cambia VERSION a ogni aggiornamento dell'app. */
-var VERSION = 'guardaroba-v010';
-var CORE = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png'];
+var VERSION = 'guardaroba-v012';
+var CORE = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
